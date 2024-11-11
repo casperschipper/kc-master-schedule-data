@@ -604,7 +604,7 @@ ${variant}`;
   var VERSION = "1.1.3";
   var TARGET_NAME = "My target name";
   var INITIAL_ELM_COMPILED_TIMESTAMP = Number(
-    "1731333033471"
+    "1731339072993"
   );
   var ORIGINAL_COMPILATION_MODE = "standard";
   var ORIGINAL_BROWSER_UI_POSITION = "BottomLeft";
@@ -9247,7 +9247,7 @@ var $elm$http$Http$expectString = function (toMsg) {
 		toMsg,
 		$elm$http$Http$resolve($elm$core$Result$Ok));
 };
-var $author$project$Main$filename = 'data/schedule3.csv';
+var $author$project$Main$filename = 'data/schedule.csv';
 var $author$project$Main$RouteProblem = function (a) {
 	return {$: 'RouteProblem', a: a};
 };
