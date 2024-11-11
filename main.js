@@ -604,7 +604,7 @@ ${variant}`;
   var VERSION = "1.1.3";
   var TARGET_NAME = "My target name";
   var INITIAL_ELM_COMPILED_TIMESTAMP = Number(
-    "1731319152590"
+    "1731333033471"
   );
   var ORIGINAL_COMPILATION_MODE = "standard";
   var ORIGINAL_BROWSER_UI_POSITION = "BottomLeft";
@@ -13022,8 +13022,6 @@ var $author$project$Main$update = F2(
 						var _v5 = _v3.a;
 						var datadata = _v5.a;
 						var data = _v5.b;
-						var newView = $author$project$Main$ListView(
-							{location: $elm$core$Maybe$Nothing, person: $elm$core$Maybe$Nothing, subjectId: $elm$core$Maybe$Nothing});
 						var happyData = A2(
 							$elm$core$List$filterMap,
 							function (x) {
@@ -13037,8 +13035,7 @@ var $author$project$Main$update = F2(
 								model,
 								{
 									data: $author$project$Main$Received(
-										{database: data, list: happyData}),
-									view: newView
+										{database: data, list: happyData})
 								}),
 							$elm$core$Platform$Cmd$none);
 					}
@@ -13156,7 +13153,8 @@ var $author$project$Main$doc = function (html) {
 				A2($elm$html$Html$Attributes$style, 'border', '1px solid gray'),
 				A2($elm$html$Html$Attributes$style, 'padding', '1em'),
 				A2($elm$html$Html$Attributes$style, 'background-color', '#ffffff'),
-				A2($elm$html$Html$Attributes$style, 'box-shadow', '0px 1px 3px rgba(0, 0, 0, 0.08); /* Subtle, layered shadows */')
+				A2($elm$html$Html$Attributes$style, 'box-shadow', '0px 1px 3px rgba(0, 0, 0, 0.08); /* Subtle, layered shadows */'),
+				A2($elm$html$Html$Attributes$style, 'margin-bottom', '6em')
 			]),
 		_List_fromArray(
 			[html]));
@@ -13663,7 +13661,7 @@ var $author$project$Main$viewTableRow = F2(
 					if (mext.$ === 'Nothing') {
 						return _List_fromArray(
 							[
-								$elm$html$Html$text('.')
+								$elm$html$Html$text('')
 							]);
 					} else {
 						var ext = mext.a;
@@ -13853,6 +13851,10 @@ var $author$project$Main$viewAllStudios = function (data) {
 			},
 			$author$project$Main$allLocations));
 };
+var $author$project$Person$getID = function (_v0) {
+	var id = _v0.a;
+	return id;
+};
 var $author$project$Main$prependMaybe = F2(
 	function (m, lst) {
 		if (m.$ === 'Just') {
@@ -13864,30 +13866,30 @@ var $author$project$Main$prependMaybe = F2(
 	});
 var $author$project$Main$listAllPeople = function (_v0) {
 	var psn = _v0.a;
-	return A2(
-		$author$project$Main$prependMaybe,
-		psn.committee.externalSupervisor,
+	var out = A2(
+		$elm$core$Debug$log,
+		'people',
 		A2(
 			$author$project$Main$prependMaybe,
-			psn.committee.m1student,
-			_List_fromArray(
-				[psn.presenter, psn.committee.external, psn.committee.chairman, psn.committee.supervisor])));
+			psn.committee.externalSupervisor,
+			A2(
+				$author$project$Main$prependMaybe,
+				psn.committee.m1student,
+				_List_fromArray(
+					[psn.presenter, psn.committee.external, psn.committee.chairman, psn.committee.supervisor]))));
+	return out;
 };
-var $elm$core$List$member = F2(
-	function (x, xs) {
-		return A2(
-			$elm$core$List$any,
-			function (a) {
-				return _Utils_eq(a, x);
-			},
-			xs);
-	});
 var $author$project$Main$containsPerson = F2(
 	function (p, psn) {
+		var allPeople = $author$project$Main$listAllPeople(psn);
 		return A2(
-			$elm$core$List$member,
-			p,
-			$author$project$Main$listAllPeople(psn));
+			$elm$core$List$any,
+			function (p2) {
+				return _Utils_eq(
+					$author$project$Person$getID(p),
+					$author$project$Person$getID(p2));
+			},
+			allPeople);
 	});
 var $author$project$Main$filterPerson = F2(
 	function (p, lst) {
