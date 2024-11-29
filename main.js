@@ -11267,7 +11267,7 @@ var $author$project$Main$viewTableRow = F2(
 			} else {
 				var pr = mpr.a;
 				var id = $author$project$Person$getIdAsInt(pr);
-				var hr = '/list' + ('?person=' + $elm$core$String$fromInt(id));
+				var hr = 'list' + ('?person=' + $elm$core$String$fromInt(id));
 				return A2(
 					$elm$html$Html$td,
 					_List_fromArray(
@@ -11319,7 +11319,7 @@ var $author$project$Main$viewTableRow = F2(
 				} else {
 					var subj = msubj.a;
 					var id = $author$project$Person$getSubjectId(subj);
-					var hr = '/list' + ('?subject=' + $elm$core$String$fromInt(id));
+					var hr = 'list' + ('?subject=' + $elm$core$String$fromInt(id));
 					return A2(
 						$elm$html$Html$a,
 						_List_fromArray(
@@ -11345,7 +11345,7 @@ var $author$project$Main$viewTableRow = F2(
 		var supervisorCell = F2(
 			function (pr, mext) {
 				var id = $author$project$Person$getIdAsInt(pr);
-				var hr = '/list' + ('?person=' + $elm$core$String$fromInt(id));
+				var hr = 'list' + ('?person=' + $elm$core$String$fromInt(id));
 				var extHyper = function () {
 					if (mext.$ === 'Nothing') {
 						return _List_fromArray(
@@ -11356,7 +11356,7 @@ var $author$project$Main$viewTableRow = F2(
 						var ext = mext.a;
 						var mid2 = $author$project$Person$getIdAsInt(ext);
 						var hr2 = function (id2) {
-							return '/list' + ('?person=' + $elm$core$String$fromInt(id2));
+							return 'list' + ('?person=' + $elm$core$String$fromInt(id2));
 						}(mid2);
 						return _List_fromArray(
 							[
