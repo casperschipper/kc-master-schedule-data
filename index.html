@@ -16,7 +16,8 @@
 
 	<script>
 		let element = document.getElementById("elm");
-		var app = Elm.Main.init({ node: document.getElementById("elm") });
+		const flags = { basepath : "kc-mrs-schedule" };
+		var app = Elm.Main.init({ node: document.getElementById("elm"), flags : flags });
 	</script>
 
 
