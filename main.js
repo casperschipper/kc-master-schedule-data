@@ -10873,7 +10873,7 @@ var $author$project$Main$resetLink = function (basepath) {
 				_List_fromArray(
 					[
 						$elm$html$Html$Attributes$href(
-						A2(
+						'/' + A2(
 							$elm$core$Maybe$withDefault,
 							'',
 							A2(
