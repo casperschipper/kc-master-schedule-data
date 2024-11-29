@@ -1,9 +1,20 @@
 - ik moet in csv uploaden, UTF-8 encoding (voor uploaden converteren) 
 
-- Casper onderzoekt of nieuwe upload in github automatische update kan pushen op RC page (en stelt dat in)
-  (casper note to self: https://chatgpt.com/c/67311621-b360-800a-a37e-f363b053d0e1)
+[?] Roos kan dan bij nieuwe upload meteen bug check doen, als het niet werkt terug naar vorige versie - door te hosten op github met alias?
 
-- Roos kan dan bij nieuwe upload meteen bug check doen, als het niet werkt terug naar vorige versie - door te hosten op github met alias?
+- design tweak / touch ?
+
+- als dit allemaal klaar: communicatie, hoe delen, QR-code poster flyer etc
+
+# done
+
+[x] is expositie in rc: <https://www.researchcatalogue.net/view/3235777/3235778>
+
+[x]  Roos maakt voorlopig schema dit studiejaar, samen kijken of het werkt (circa half november)
+
+
+[x] Casper onderzoekt of nieuwe upload in github automatische update kan pushen op RC page (en stelt dat in)
+  (casper note to self: https://chatgpt.com/c/67311621-b360-800a-a37e-f363b053d0e1)
 
 [x] Casper kijkt nog even of aparte links gegenereerd worden bij filteren op commissielid voor makkelijk delen schema met individuen
 
@@ -13,12 +24,8 @@
 
 [x] externe supervisor in kolom bij interne met komma gescheiden
 
-[1/2] main subject zichtbaar in tabel en filterbaar
+[x] main subject zichtbaar in tabel en filterbaar
 
-- Roos maakt voorlopig schema dit studiejaar, samen kijken of het werkt (circa half november)
 
-- deelbare URL moet nog komen -> in expositie RC zetten
 
-- als dit allemaal klaar: communicatie, hoe delen, QR-code poster flyer etc
 
-- design tweak / touch ?
