@@ -1,6 +1,29 @@
-img.kclogo { 
-    width:300px;
+@font-face {
+    font-family: MarrSans-Regular-Web;
+    src: url(resources/fonts/MarrSans-Regular-Web.woff2);
 }
+
+@font-face {
+    font-family: MarrSansCondensed-Semibold-Web;
+    src: url(resources/fonts/MarrSansCondensed-Semibold-Web.woff2);
+}
+
+
+.kclogo-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    left: -8px;
+}
+
+img.kclogo {
+    position: absolute;
+    width: 300px;
+    left: -15px;
+}
+
+
 
 body {
     font-size: 1.0em;
@@ -16,7 +39,7 @@ body {
 }
 
 table {
-    border-spacing: 0.5em;
+    /* border-spacing: 0.5em; */
 }
 
 th,
@@ -81,7 +104,7 @@ td:nth-child(6) {
     top: 0;
     left: 0;
     z-index: -1;
-    opacity:0.5;
+    opacity: 0.5;
 }
 
 .hero-section::after {
@@ -92,4 +115,24 @@ td:nth-child(6) {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.day-button {
+    font-family: "MarrSansCondensed-Semibold-Web";
+    padding: .42em 1.125em;
+    font-size: 1.625rem;
+    display: inline-block;
+    margin: 0 0.25em 0.25em 0;
+    text-decoration: none;
+    /* box-shadow: 5px 4px 0px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 4px 0px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 4px 0px 1px rgba(0,0,0,0.75); */
+    background-color: #1f1f1f;
+    transition: background .2s ease 0ms, color .2s ease 0ms, border .2s ease 0ms;
+    color: white;
+}
+
+.day-button:hover {
+    background-color: #00fcbc;
+    color: #1f1f1f;
 }
