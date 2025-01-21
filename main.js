@@ -11042,7 +11042,7 @@ var $author$project$Main$viewDaySelector = F2(
 		var day = _v0.a;
 		var link = function (d) {
 			return $elm$html$Html$Attributes$href(
-				A2(
+				'/' + A2(
 					$elm$core$Maybe$withDefault,
 					'/',
 					A2(
