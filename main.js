@@ -10392,7 +10392,7 @@ var $author$project$Main$kcDataDecoder = A2(
 							A2($BrianHicks$elm_csv$Csv$Decode$field, 'External committee member', $BrianHicks$elm_csv$Csv$Decode$string),
 							A2(
 								$BrianHicks$elm_csv$Csv$Decode$pipeline,
-								A2($BrianHicks$elm_csv$Csv$Decode$field, 'Chairperson', $BrianHicks$elm_csv$Csv$Decode$string),
+								A2($BrianHicks$elm_csv$Csv$Decode$field, 'Chair', $BrianHicks$elm_csv$Csv$Decode$string),
 								A2(
 									$BrianHicks$elm_csv$Csv$Decode$pipeline,
 									A2($BrianHicks$elm_csv$Csv$Decode$field, 'Timeslot', $BrianHicks$elm_csv$Csv$Decode$string),
@@ -10619,7 +10619,7 @@ var $author$project$Main$decodeCsv = function (csv) {
 	var csvLines = A4(
 		$BrianHicks$elm_csv$Csv$Decode$decodeCustom,
 		{
-			fieldSeparator: _Utils_chr(';')
+			fieldSeparator: _Utils_chr(',')
 		},
 		$BrianHicks$elm_csv$Csv$Decode$FieldNamesFromFirstRow,
 		$author$project$Main$kcDataDecoder,
