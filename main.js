@@ -6947,7 +6947,7 @@ var $author$project$Main$Studio3 = {$: 'Studio3'};
 var $author$project$Main$Studio4 = {$: 'Studio4'};
 var $author$project$Main$Studio5 = {$: 'Studio5'};
 var $author$project$Main$Studio6 = {$: 'Studio6'};
-var $author$project$Main$StudioB = {$: 'StudioB'};
+var $author$project$Main$StudioA = {$: 'StudioA'};
 var $elm$core$String$toLower = _String_toLower;
 var $author$project$Main$locFromString = function (str) {
 	var _v0 = $elm$core$String$toLower(str);
@@ -6964,8 +6964,8 @@ var $author$project$Main$locFromString = function (str) {
 			return $elm$core$Maybe$Just($author$project$Main$Studio5);
 		case 'studio6':
 			return $elm$core$Maybe$Just($author$project$Main$Studio6);
-		case 'studioB':
-			return $elm$core$Maybe$Just($author$project$Main$StudioB);
+		case 'studioA':
+			return $elm$core$Maybe$Just($author$project$Main$StudioA);
 		default:
 			return $elm$core$Maybe$Nothing;
 	}
@@ -9673,8 +9673,8 @@ var $author$project$Main$fromMonth = function (month) {
 	}
 };
 var $author$project$Main$locFromCSVString = function (str) {
-	if (str === 'B') {
-		return $elm$core$Result$Ok($author$project$Main$StudioB);
+	if (str === 'A') {
+		return $elm$core$Result$Ok($author$project$Main$StudioA);
 	} else {
 		var studioStr = str;
 		var _v1 = $elm$core$String$toInt(studioStr);
@@ -11007,7 +11007,7 @@ var $author$project$Main$loc2string = function (loc) {
 		case 'Studio6':
 			return 'studio 6';
 		default:
-			return 'studio B';
+			return 'studio A';
 	}
 };
 var $author$project$Main$viewToRoute = function (vw) {
@@ -11754,7 +11754,7 @@ var $author$project$Main$headers = A2(
 			$elm$html$Html$text('title'),
 			$elm$html$Html$text('student'),
 			$elm$html$Html$text('main subject'),
-			$elm$html$Html$text('chairman'),
+			$elm$html$Html$text('chair'),
 			$elm$html$Html$text('supervisor'),
 			$elm$html$Html$text('external'),
 			$elm$html$Html$text('m1 student')
